@@ -3,7 +3,7 @@
 This project explores the use of Hidden Markov Models (HMMs) to classify real estate market trends, focusing on identifying patterns of price increases and decreases (0: 'decreasing', 1: 'increasing':. The data includes historical real estate transactions from 2007–2019, featuring variables such as property type, number of bedrooms, and median moving averages. Due to the absence of sequential time series data for individual properties, HMMs were leveraged as a preprocessing tool to uncover latent states, which were then used as features in various classification models.
 
 ### Data
-- ***House Property Sales Time Series Data in Australian Capital Territory (ACT) from 2007-2019
+- House Property Sales Time Series Data in Australian Capital Territory (ACT) from 2007-2019
 - Data Source: https://www.kaggle.com/datasets/htagholdings/property-sales?select=raw_sales.csv
 
 ### Methodology
