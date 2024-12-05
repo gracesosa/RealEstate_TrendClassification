@@ -10,8 +10,10 @@ This project explores the use of Hidden Markov Models (HMMs) to classify real es
 - **Goal**: Classifies whether or not a property is expcted to increase or decrease ( >1%) from quarter to quarter
 - **Hidden Markov Models**: HMMs were used to partition the data into 5 latent market states (e.g. decreasing, increasing). These states were then added as a new feature, `hidden_state`, to enhance the classification task. The optimal number of hidden states was determined using Akaike and Bayesian Information Criteria (AIC/BIC).
 - **Feature Engineering**: Variables such as normalized prices, price movement, and price change were engineered to capture trends. Train/Test Data was split 80/20 before and after 2017 to avoid data leakage.
-- **Classification Models**: After adding the `hidden_state` feature, various classification models (Logistic Regression, SVM, Decision Trees, Random Forest, and Gradient Boosting) were trained to predict price movement trends. The best-performing model, Gradient Boosting, achieved an **AUC of 0.77** on cross-validated test data.
+- **Classification Models**: After adding the `hidden_state` feature, various classification models (Logistic Regression, SVM, Decision Trees, Random Forest, and Gradient Boosting) were trained to predict price movement trends. 
 - **Libraries**: `hmmlearn`, `scikit-learn`, `pandas`, and `matplotlib` for model development and evaluation
+
+**Project Outcomes**: The best-performing model, Gradient Boosting, used along with the 'hidden_state' mutated feature created from partitioning the dating with Hidden Markov Models, achieved an **AUC of 0.77** on cross-validated (k=5) test data 
 
 While HMMs added a slight improvement in predictive performance, they highlighted the potential of uncovering latent market states for sequential and temporal data analysis. The inclusion of the `hidden_state` feature improved the Gradient Boosting model's AUC from 0.78 to 0.80 on the original test data.
 
@@ -27,3 +29,4 @@ While HMMs added a slight improvement in predictive performance, they highlighte
 - **Expanded Data**: Incorporating property-specific historical data, such as square footage or neighborhood details
 - **Advanced Algorithms**: Exploring XGBoost and RNNs for deeper insights into latent trends.
 - - **Hybrid Models**: Combining HMMs with ARIMA or RNNs for improved sequential trend analysis, more specifically for price prediction
+
