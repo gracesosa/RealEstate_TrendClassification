@@ -15,7 +15,7 @@ This project explores the use of Hidden Markov Models (HMMs) to classify real es
 While HMMs added a slight improvement in predictive performance, they highlighted the potential of uncovering latent market states for sequential and temporal data analysis. The inclusion of the `hidden_state` feature improved the Gradient Boosting model's AUC from 0.78 to 0.80 on the original test data.
 
 ## Future Directions
-- **Multi-Class Clasifiction**: Incorporate additioal classes for a more insightful model:
+- **Multi-Class Clasifiction**: Incorporate additional classes for a more robust model with deeper insights:
   - 0: Rapid Decrease: (price change <= -3% or < 2σ within a relatively short time period t, e.g. a month)
   - 1: Steady Decrease: (-1% <= price change <= -0.5% over several months m)
   - 2: Rapid Increase
